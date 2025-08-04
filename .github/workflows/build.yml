@@ -8,6 +8,7 @@ on:
 # the job to write the dependency metadata.
 ###############################################################################
 permissions:
+  actions: read
   contents: write
 
 ###############################################################################
@@ -42,3 +43,8 @@ jobs:
 
       - name: Hola, amigos
         run: ${{ github.workspace }}/hola
+
+      - uses: anchore/sbom-action@v0
+        with:
+          path: ./
+        
