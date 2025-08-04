@@ -62,6 +62,7 @@ jobs:
         run: |
            echo ---------SBOM-------------
            cat nice-sbom.spdx.json
+      - name: upload sbom as artifact
       - uses: actions/upload-artifact@v3
         with:
           name: evidence
