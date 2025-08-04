@@ -75,7 +75,7 @@ jobs:
            product-version: ${{env.PRODUCT_VERSION}} 
            scribe-client-secret: ${{ secrets.SCRIBE_SECRET }}
            verbose: 2
-           format: attest
+   
      
               
         
