@@ -66,6 +66,7 @@ jobs:
            product-key:  ${{ env.APP_NAME }}
            product-version: ${{env.PRODUCT_VERSION}} 
            scribe-client-secret: ${{ secrets.SCRIBE_SECRET }}
+           verbose: 2
      
               
         
