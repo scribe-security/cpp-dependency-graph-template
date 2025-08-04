@@ -1,4 +1,4 @@
-v.name: Example that directly invokes `vcpkg install`
+name: Example that directly invokes `vcpkg install`
 
 on:
   workflow_dispatch:
