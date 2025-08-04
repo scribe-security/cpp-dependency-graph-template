@@ -1,4 +1,4 @@
-name: Example that directly invokes `vcpkg install`
+name: Example that usus `vcpkg install` and Scribe's `valint` tool
 
 on:
   workflow_dispatch:
@@ -59,10 +59,8 @@ jobs:
              -o git-sbom.spdx.json \
               "https://api.github.com/repos/$GITHUB_REPOSITORY/dependency-graph/sbom" 
      
-      - name: type-SBOM
+      - name: expose-spdx-payload 
         run: |
-           echo ---------SBOM-------------
-           cat git-sbom.spdx.json
            jq '.sbom' git-sbom.spdx.json > nice-sbom.spdx.json
     
       - uses: actions/upload-artifact@v4
@@ -77,6 +75,7 @@ jobs:
            product-version: ${{env.PRODUCT_VERSION}} 
            scribe-client-secret: ${{ secrets.SCRIBE_SECRET }}
            verbose: 2
+           format: attest
      
               
         
