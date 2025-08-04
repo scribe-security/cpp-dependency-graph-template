@@ -64,7 +64,7 @@ jobs:
            echo ---------SBOM-------------
            cat nice-sbom.spdx.json
            
-      - name: upload-sbom-as -rtifact
+    
       - uses: actions/upload-artifact@v3
         with:
           name: evidence
