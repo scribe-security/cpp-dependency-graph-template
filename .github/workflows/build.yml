@@ -59,13 +59,12 @@ jobs:
            echo ---------SBOM-------------
            cat nice.sbom.spdx.json
       - name: upload SBOM to scribe hub
-     
         uses: scribe-security/action-bom@master
         with:
            target: 'file:nice.sbom.spdx.json'
            product-key:  ${{ env.APP_NAME }}
            product-version: ${{env.PRODUCT_VERSION}} 
            scribe-client-secret: ${{ secrets.SCRIBE_SECRET }}
-           #format: attest
+     
               
         
