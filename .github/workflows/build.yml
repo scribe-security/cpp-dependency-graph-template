@@ -59,7 +59,7 @@ jobs:
       - name: type-SBOM
         run: |
            echo ---------SBOM-------------
-           cat nice.sbom.spdx.json
+           cat nice-sbom.spdx.json
       - name: upload SBOM to scribe hub
         uses: scribe-security/action-bom@master
         with:
