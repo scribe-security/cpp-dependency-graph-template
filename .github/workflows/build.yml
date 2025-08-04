@@ -19,6 +19,8 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   VCPKG_FEATURE_FLAGS: dependencygraph
   SBOM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  APP_NAME: "vcpkg-automation"
+  PRODUCT_VERSION: "1.1.0"
 
 jobs:
   build:
