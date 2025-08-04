@@ -48,6 +48,8 @@ jobs:
       - name: Hola, amigos
         run: ${{ github.workspace }}/hola
 
+      
+
       - name: export-SBOM
         run: |
            curl -L \
@@ -60,6 +62,10 @@ jobs:
         run: |
            echo ---------SBOM-------------
            cat nice-sbom.spdx.json
+      - uses: actions/upload-artifact@v3
+        with:
+          name: evidence
+          path: nice-sbom.spdx.json
       - name: upload SBOM to scribe hub
         uses: scribe-security/action-bom-cli@master
         with:
