@@ -9,7 +9,8 @@ on:
 ###############################################################################
 permissions:
   actions: read
-  contents: write
+  contents: read, write
+  id-token: write
 
 ###############################################################################
 # Add these environment variables to your workflow to enable the vcpkg
